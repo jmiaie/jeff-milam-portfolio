@@ -1,0 +1,9 @@
+export const CYAN = "#00e5ff";
+export const CYAN_DIM = "rgba(0,229,255,0.12)";
+export const CYAN_GLOW = "rgba(0,229,255,0.25)";
+export const SURFACE = "rgba(255,255,255,0.03)";
+export const SURFACE_2 = "rgba(255,255,255,0.06)";
+export const BORDER = "rgba(255,255,255,0.08)";
+export const TEXT = "#e4e4e7";
+export const TEXT_DIM = "#71717a";
+export const BG = "#09090b";
