@@ -1,5 +1,15 @@
-import { Brain, Award, Zap, TrendingUp, Users, Workflow, Building2, BarChart3, GraduationCap, Github, Linkedin, Mail } from "lucide-react";
+import { Brain, Award, Zap, TrendingUp, Users, Workflow, Building2, BarChart3, GraduationCap, Github, Linkedin, Mail, Database } from "lucide-react";
 
+/**
+ * @typedef {Object} ExperienceItem
+ * @property {string} title
+ * @property {string} org
+ * @property {string} period
+ * @property {string[]} tags
+ * @property {string[]} bullets
+ */
+
+/** @type {ExperienceItem[]} */
 export const EXPERIENCE = [
   {
     title: "Managing Partner & Founder",
@@ -7,10 +17,10 @@ export const EXPERIENCE = [
     period: "Dec 2019 – Present",
     tags: ["Founder", "AI Engineer", "TPM"],
     bullets: [
-      "Built and shipped production AI tools including AegisFlow, Niagra, UnifiedRetrieval, and Sandfish",
-      "Developed OMPA — a universal agentic memory layer and production multi-agent AI orchestration system",
-      "Leading capital markets and AI-driven consulting firm serving SBA clients and delivering business automation",
-      "Managing live production deployments with human-in-the-loop oversight across multiple agentic systems",
+      "Architected OMPA — a universal production-grade multi-agent orchestration and memory system",
+      "Built and deployed high-performance AI frameworks including AegisFlow, Niagra, and Sandfish",
+      "Leading capital markets firm delivering AI-driven business automation and agentic workstreams",
+      "Managing live production deployments with human-in-the-loop oversight across distributed agent swarms",
     ],
   },
   {
@@ -39,13 +49,17 @@ export const EXPERIENCE = [
   },
 ];
 
+/**
+ * @typedef {Object} EducationItem
+ * @property {string} degree
+ * @property {string} school
+ * @property {string} gpa
+ * @property {import('lucide-react').LucideIcon} icon
+ * @property {string[]} [details]
+ */
+
+/** @type {EducationItem[]} */
 export const EDUCATION = [
-  { 
-    degree: "M.S. AI Engineering", 
-    school: "Quantic School of Business & Technology", 
-    gpa: "2027 Candidate", 
-    icon: Brain 
-  },
   { 
     degree: "MBA (4.0 GPA)", 
     school: "Quantic School of Business & Technology", 
@@ -61,6 +75,13 @@ export const EDUCATION = [
     ]
   },
   { 
+    degree: "M.S. AI Engineering*", 
+    school: "Quantic School of Business & Technology", 
+    gpa: "In Progress / Candidate", 
+    icon: Brain,
+    details: ["*Estimated Completion: July 2027"]
+  },
+  { 
     degree: "AI for Business Certificate", 
     school: "Quantic School of Business & Technology", 
     gpa: "Professional Certificate", 
@@ -74,25 +95,46 @@ export const EDUCATION = [
   },
 ];
 
-export const PROJECTS = [
+/**
+ * @typedef {Object} ProjectItem
+ * @property {string} title
+ * @property {string} desc
+ * @property {import('lucide-react').LucideIcon} icon
+ * @property {string[]} tags
+ */
+
+/** @type {ProjectItem[]} */
+export const AI_PROJECTS = [
+  {
+    title: "AegisFlow Orchestrator",
+    desc: "A production-grade multi-agent backbone for autonomous task execution. Features dynamic delegation, context-aware routing, and zero-token-burn (ZTB) caching layers.",
+    icon: Workflow,
+    tags: ["Python", "FastAPI", "Redis", "VectorDB"]
+  }
+];
+
+export const RE_TECH_PROJECTS = [
   {
     title: "Automated Real Estate Scanner",
-    desc: "Python-based pipeline that scrapes MLS listings, applies custom scoring algorithms (cap rate, cash-on-cash, neighborhood growth vectors), and delivers ranked opportunities via automated reports.",
+    desc: "AI-driven pipeline that scrapes MLS data, applies custom valuation models (cap rate, neighbor growth vectors), and delivers ranked opportunities via automated agent summaries.",
     icon: Building2,
-    tags: ["Python", "BeautifulSoup", "Pandas", "PostgreSQL"]
-  },
+    tags: ["BeautifulSoup", "Pandas", "LLM Extraction"]
+  }
+];
+
+export const QUANT_PROJECTS = [
   {
     title: "Quantitative Trading Research",
-    desc: "Backtesting framework for momentum and mean-reversion strategies on equity and options markets. Integrates real-time data feeds with risk-adjusted portfolio optimization using Monte Carlo simulation.",
+    desc: "Quantitative backtesting framework for options strategies. Integrates real-time feeds with risk-adjusted portfolio optimization and Monte Carlo simulation.",
     icon: BarChart3,
-    tags: ["NumPy", "SciPy", "Alpaca API", "Plotly"]
+    tags: ["NumPy", "SciPy", "Alpaca API"]
   }
 ];
 
 export const SANDFISH_METRICS = [
   { label: "Uptime & Reliability", value: "24/7", icon: Zap },
-  { label: "Memory Retention", value: "Infinite", icon: TrendingUp },
-  { label: "Response Latency", value: "<800ms", icon: Users },
+  { label: "Memory Retention", value: "Infinite", icon: Database },
+  { label: "Response Latency", value: "<800ms", icon: Brain },
   { label: "Orchestration Modes", value: "OMPA", icon: Workflow },
 ];
 
@@ -124,6 +166,15 @@ result = await swarm.execute(
     context={"sector": "enterprise", "depth": "deep"}
 )`;
 
+/**
+ * @typedef {Object} ArticleItem
+ * @property {string} title
+ * @property {string} excerpt
+ * @property {string} date
+ * @property {string} tag
+ */
+
+/** @type {ArticleItem[]} */
 export const ARTICLES = [
   {
     title: "Zero Token Burn: The Economics of Intelligent Inference",
@@ -143,6 +194,21 @@ export const ARTICLES = [
     date: "November 2025",
     tag: "Leadership",
   },
+];
+
+export const SKILL_GROUPS = [
+  {
+    category: "AI & ML",
+    skills: ["LLM Orchestration", "RAG Architecture", "Multi-Agent Swarms", "Vector DBs", "Prompt Engineering"]
+  },
+  {
+    category: "Engineering",
+    skills: ["Python", "FastAPI", "React / Vite", "Node.js", "Redis / PostgreSQL"]
+  },
+  {
+    category: "Strategy",
+    skills: ["Capital Programming", "Vendor Management", "P&L / Corporate Strategy", "Stakeholder Mgmt"]
+  }
 ];
 
 export const CONTACT_LINKS = [

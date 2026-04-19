@@ -1,16 +1,40 @@
-# React + Vite
+# Jeff Milam | AI Engineer & TPM Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, premium React/Vite portfolio showcasing expertise in AI Engineering, Technical Program Management, and Strategic Leadership.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Modular Architecture**: Clean, reusable component-based structure using React 19.
+- **Micro-Animations**: Scroll-triggered reveal animations via IntersectionObserver.
+- **Active Navigation**: Real-time section tracking in the fixed header.
+- **Type Safety**: JSDoc-powered schema validation for the data layer.
+- **Performance Optimized**: Zero-latency font preloading, component memoization, and minimal asset footprint.
+- **Responsive Design**: Mobile-first navigation with integrated burger menu.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19 + Vite
+- **Styling**: Vanilla CSS (Modern CSS Properties & Inlines)
+- **Icons**: Lucide React
+- **Typography**: Space Grotesk & JetBrains Mono
 
-## Expanding the ESLint configuration
+## 📂 Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/components/sections`: Business logic and section layouts.
+- `src/components/ui`: Atomic, reusable UI components (Buttons, Badges, Glass, etc.).
+- `src/data`: Centralized `portfolio.js` containing all content schemas.
+- `src/styles`: Theme definition and global tokens.
+
+## ⚙️ Development
+
+```bash
+npm install
+npm run dev
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+

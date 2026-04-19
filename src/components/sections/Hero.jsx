@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Activity, ArrowRight, Github } from "lucide-react";
 import { TerminalBoot } from "../ui/TerminalBoot";
+import { NeuralBackground } from "../ui/NeuralBackground";
+import { Button } from "../ui/Button";
 import { CYAN, CYAN_GLOW, CYAN_DIM, TEXT_DIM, TEXT, BORDER } from "../../styles/theme";
 
 export function Hero() {
@@ -15,6 +17,7 @@ export function Hero() {
       position: "relative",
       overflow: "hidden",
     }}>
+      <NeuralBackground />
       {/* Grid BG */}
       <div style={{
         position: "absolute", inset: 0,
@@ -45,7 +48,7 @@ export function Hero() {
           borderRadius: 999, padding: "6px 16px", marginBottom: 32, fontSize: 13,
           color: CYAN, fontWeight: 500,
         }}>
-          <Activity size={14} /> Available for roles - AI Engineering · TPM · Leadership
+          <Activity size={14} /> Available for AIE · Senior AI PM · Technical Leadership
         </div>
         <h1 style={{
           fontSize: "clamp(36px, 6vw, 64px)",
@@ -61,12 +64,12 @@ export function Hero() {
         <p style={{
           fontSize: "clamp(16px, 2vw, 20px)",
           color: TEXT_DIM,
-          maxWidth: 560,
+          maxWidth: 600,
           margin: "0 auto 48px",
           lineHeight: 1.6,
         }}>
           MBA · M.S. AI Engineering · 13-Year TPM Veteran<br />
-          I lead the boardroom <span style={{ color: CYAN }}>and</span> code the infrastructure.
+          I lead the boardroom <span style={{ color: CYAN }}>and</span> architect the production intelligence.
         </p>
       </div>
 
@@ -84,30 +87,14 @@ export function Hero() {
           opacity: 0, animation: "fadeIn 0.5s ease forwards",
           position: "relative", zIndex: 1,
         }}>
-          <a href="#resume" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: CYAN, color: "#000", fontWeight: 600, fontSize: 14,
-            padding: "12px 24px", borderRadius: 8, textDecoration: "none",
-            transition: "transform 0.2s, box-shadow 0.2s",
-            boxShadow: `0 0 20px ${CYAN_GLOW}`,
-          }}
-            onMouseEnter={e => { e.target.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={e => { e.target.style.transform = "translateY(0)"; }}
-          >
-            View Resume <ArrowRight size={16} />
-          </a>
-          <a href="#sandfish" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "transparent", color: TEXT, fontWeight: 600, fontSize: 14,
-            padding: "12px 24px", borderRadius: 8, textDecoration: "none",
-            border: `1px solid ${BORDER}`, transition: "border-color 0.2s",
-          }}
-            onMouseEnter={e => e.target.style.borderColor = "rgba(0,229,255,0.3)"}
-            onMouseLeave={e => e.target.style.borderColor = BORDER}
-          >
-            <Github size={16} /> SandFish Project
-          </a>
+          <Button href="#resume" icon={ArrowRight}>
+            View Resume
+          </Button>
+          <Button href="#sandfish" variant="ghost" icon={Github}>
+            SandFish Project
+          </Button>
         </div>
+
       )}
     </section>
   );

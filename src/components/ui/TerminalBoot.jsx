@@ -2,17 +2,17 @@ import { useState, useEffect, useRef } from "react";
 import { CYAN, TEXT_DIM, TEXT, BORDER } from "../../styles/theme";
 
 const BOOT_LINES = [
-  { text: "$ jeff-milam --init", delay: 0, type: "cmd" },
-  { text: "[BOOT] Loading credentials...", delay: 400, type: "sys" },
-  { text: "├─ MBA, 4.0 GPA .......................... ✓", delay: 800, type: "ok" },
-  { text: "├─ M.S. AI Engineering ................... ✓", delay: 1100, type: "ok" },
-  { text: "├─ 13yr Technical Program Management ..... ✓", delay: 1400, type: "ok" },
-  { text: "├─ OMPA Platform Architect ............... ✓", delay: 1700, type: "ok" },
-  { text: "└─ SandFish Swarm Framework .............. ✓", delay: 2000, type: "ok" },
-  { text: "[SYS] Initializing agentic systems...", delay: 2500, type: "sys" },
-  { text: "[OK] All systems operational.", delay: 3000, type: "success" },
+  { text: "$ jeff-milam --aie-init", delay: 0, type: "cmd" },
+  { text: "[BOOT] Initializing neural identity...", delay: 400, type: "sys" },
+  { text: "├─ MBA, Advanced Finance (4.0 GPA) ....... ✓", delay: 800, type: "ok" },
+  { text: "├─ M.S. Artificial Intelligence Eng ...... ✓", delay: 1100, type: "ok" },
+  { text: "├─ 13yr TPM & Engineering Lead ........... ✓", delay: 1400, type: "ok" },
+  { text: "├─ OMPA Knowledge Graph Linked ........... ✓", delay: 1700, type: "ok" },
+  { text: "└─ SandFish Agent Swarm Ready ............ ✓", delay: 2000, type: "ok" },
+  { text: "[SYS] Syncing vector context stores...", delay: 2500, type: "sys" },
+  { text: "[OK] Agentic systems online.", delay: 3000, type: "success" },
   { text: "", delay: 3400, type: "blank" },
-  { text: "Ready. Type 'help' or scroll to explore.", delay: 3500, type: "prompt" },
+  { text: "Ready. Type 'help' to audit capabilities.", delay: 3500, type: "prompt" },
 ];
 
 export function TerminalBoot({ onComplete }) {
