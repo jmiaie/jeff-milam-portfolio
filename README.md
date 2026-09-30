@@ -1,3 +1,6 @@
+> **Status (2026-09-30):** abandoned portfolio WIP — see [`STATUS.md`](STATUS.md).  
+> Install tip: `npm install --legacy-peer-deps` (React 19 ↔ lucide peer).
+
 # Jeff Milam | AI Engineer & TPM Portfolio
 
 A high-performance, premium React/Vite portfolio showcasing expertise in AI Engineering, Technical Program Management, and Strategic Leadership.
